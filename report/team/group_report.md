@@ -25,8 +25,8 @@ Trong cả ba shape của nhóm, `durability.issue_refund` là điểm ghi duy n
 ### Test và checker
 
 - Smoke: `py -3.12 -m lab8.smoke` — pass, Python 3.12.10.
-- Host suite: `py -3.12 -m pytest -q` — `55 passed, 248 deselected`, gồm regression test orchestrator mới.
-- Ma trận student: `py -3.12 -m pytest -q -m student -o addopts=` — `248 passed, 55 deselected` (62 test áp dụng cho mỗi shape). Output: [test_results_student_matrix.txt](test_results_student_matrix.txt).
+- Host suite: `py -3.12 -m pytest -q` — `58 passed, 249 deselected`, gồm regression test orchestrator mới và test workflow bổ sung.
+- Ma trận student: `py -3.12 -m pytest -q -m student -o addopts=` — `249 passed, 58 deselected` (63 test áp dụng cho workflow và 62 test cho mỗi shape còn lại). Output: [test_results_student_matrix.txt](test_results_student_matrix.txt).
 - Checker: `py -3.12 -m lab8.check_submission` — `0 FAIL, 1 WARN`. Cảnh báo duy nhất là workspace còn thay đổi chưa commit; checker in HEAD `26e4a53`.
 - Crash suite: `py -3.12 -m lab8.crash_test --count 20 --out reports/crash.json` — `20/20`.
 
@@ -59,7 +59,7 @@ Lệnh `py -3` ban đầu trỏ tới Python 3.11 không còn tồn tại; Pytho
 
 ## 7. Đóng góp 
 
-Ba commit triển khai shape lần lượt là `5c4ca67` (Cường), `4458db6` (Dung) và `5bd9052` (Trường). Cường bổ sung test handoff orchestrator trong commit [`7c3bfd2`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/7c3bfd24dc4550ad9f22282d0d9b348ae6af7889); test này pass. Ma trận student chạy lại đạt `248 passed, 55 deselected`, gồm 62 ca cho mỗi shape; output được đính kèm tại [test_results_student_matrix.txt](test_results_student_matrix.txt). Các test liên quan được liệt kê trong bảng [TEAM.md](../../TEAM.md) và từng báo cáo cá nhân.
+Ba commit triển khai shape lần lượt là `5c4ca67` (Cường), `4458db6` (Dung) và `5bd9052` (Trường). Dung bổ sung test thiếu `order_id` trong commit [`3f0db08`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/3f0db08f9ad1ff8b6cc0db7a95b8c3f29a00d542); test này kiểm tra trạng thái `needs_info` và không ghi ledger. Cường bổ sung test handoff orchestrator trong commit [`7c3bfd2`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/7c3bfd24dc4550ad9f22282d0d9b348ae6af7889); test này pass. Ma trận student chạy lại đạt `249 passed, 58 deselected`, gồm 63 ca cho workflow và 62 ca cho mỗi shape còn lại; output được đính kèm tại [test_results_student_matrix.txt](test_results_student_matrix.txt). Các test liên quan được liệt kê trong bảng [TEAM.md](../../TEAM.md) và từng báo cáo cá nhân.
 
 ## 8. Hạn chế
 

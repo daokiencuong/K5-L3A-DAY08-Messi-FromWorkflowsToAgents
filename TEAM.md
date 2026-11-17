@@ -24,10 +24,10 @@
 | Người           | Vai                    | Commit    | Test đã thêm hoặc sửa                                                                                            |
 | --------------- | ---------------------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
 | Đào Kiên Cường  | Orchestrator + báo cáo | `5c4ca67` (shape), `7c3bfd2` (test) | `src/tests/test_orchestrator_handoff_regression.py`, `src/tests/test_public_matrix.py`; targeted test 1 passed; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
-| Nguyễn Thị Dung | Workflow               | `4458db6` | `src/tests/test_public_matrix.py`, `test_authorization.py`, `test_order_cap_and_approval_binding.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
+| Nguyễn Thị Dung | Workflow               | `4458db6` (shape), `3f0db08` (test) | `src/tests/test_workflow_member.py`, `src/tests/test_public_matrix.py`, `test_authorization.py`, `test_order_cap_and_approval_binding.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 249 passed. |
 | Vũ Xuân Trường  | Single agent           | `5bd9052` | `src/tests/test_public_matrix.py`, `test_refund_idempotency.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
 
-Ma trận được chạy lại bằng `py -3.12 -m pytest -q -m student -o addopts=`: `248 passed, 55 deselected`. Tổng số gồm 62 ca cho mỗi shape; output console được đính kèm tại `report/team/test_results_student_matrix.txt`.
+Ma trận được chạy lại bằng `py -3.12 -m pytest -q -m student -o addopts=`: `249 passed, 58 deselected`. Tổng số gồm 63 ca cho workflow và 62 ca cho mỗi shape còn lại; output console được đính kèm tại `report/team/test_results_student_matrix.txt`.
 
 ## Báo cáo cá nhân
 

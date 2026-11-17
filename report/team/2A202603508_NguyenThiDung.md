@@ -23,13 +23,13 @@ Phụ trách shape `workflow` trong `src/lab8/shapes/workflow.py`. Workflow th�
 ## 4. Bằng chứng và kiểm thử
 
 - File triển khai: `src/lab8/shapes/workflow.py`.
-- Đã chạy lại ma trận student: `py -3.12 -m pytest -q -m student -o addopts=` — `248 passed, 55 deselected`; 62 test áp dụng cho workflow đều pass.
-- Đã chạy lại host suite: `py -3.12 -m pytest -q` — `55 passed, 248 deselected`.
+- Đã chạy lại ma trận student: `py -3.12 -m pytest -q -m student -o addopts=` — `249 passed, 58 deselected`; 63 test áp dụng cho workflow đều pass.
+- Đã chạy lại host suite: `py -3.12 -m pytest -q` — `58 passed, 249 deselected`.
 - Public benchmark: 70/70 trial pass; pass^5 `1.000`; cost/success `27.86` VND mô phỏng; run ID mẫu `R-workflow-C-001-s11`.
 - Hidden self-check: 200 trial chạy hết, `0` lỗi và `0` leak suspect. Không có nhãn nên đây không phải điểm hidden.
 - Crash suite: `20/20` toàn suite.
 
-Test liên quan: `src/tests/test_workflow_member.py`, `src/tests/test_public_matrix.py`, `test_crash_suite.py`, `test_authorization.py` và `test_order_cap_and_approval_binding.py`. Output ma trận student: [`test_results_student_matrix.txt`](test_results_student_matrix.txt) — `248 passed, 55 deselected` tổng thể; 62 ca áp dụng cho workflow đều pass. Test thành viên mới kiểm tra claim thiếu `order_id` trả `needs_info` và không ghi ledger.
+Test liên quan: `src/tests/test_workflow_member.py`, `src/tests/test_public_matrix.py`, `test_crash_suite.py`, `test_authorization.py` và `test_order_cap_and_approval_binding.py`. Output ma trận student: [`test_results_student_matrix.txt`](test_results_student_matrix.txt) — `249 passed, 58 deselected` tổng thể; 63 ca áp dụng cho workflow đều pass. Test thành viên mới kiểm tra claim thiếu `order_id` trả `needs_info` và không ghi ledger.
 
 ## 5. Công cụ AI đã dùng
 
