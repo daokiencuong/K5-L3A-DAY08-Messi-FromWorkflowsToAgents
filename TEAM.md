@@ -12,8 +12,8 @@
 | STT | Họ tên          | MSSV        | Email                       | GitHub       | Vai trò     |
 | --: | --------------- | ----------- | --------------------------- | ------------ | ----------- |
 |   1 | Đào Kiên Cường  | 2A202603396 | 26ai.cuongdk\@vinuni.edu.vn | daokiencuong | Nhóm trưởng, orchestrator, báo cáo |
-|   2 | Nguyễn Thị Dung | 2A202603508 |                             |              | Workflow |
-|   3 | Vũ Xuân Trường  | 2A202603433 |                             |              | Single agent |
+|   2 | Nguyễn Thị Dung | 2A202603508 | dungthngn@gmail.com         | zoesayhii    | Workflow |
+|   3 | Vũ Xuân Trường  | 2A202603433 | 26ai.truongvx@vinuni.edu.vn | TruongXuan-Vu | Single agent |
 
 Gợi ý chia vai:
 
