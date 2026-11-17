@@ -25,9 +25,9 @@ Trong cả ba shape của nhóm, `durability.issue_refund` là điểm ghi duy n
 ### Test và checker
 
 - Smoke: `py -3.12 -m lab8.smoke` — pass, Python 3.12.10.
-- Host suite: `py -3.12 -m pytest -q` — `54 passed, 248 deselected`.
-- Ma trận student: `py -3.12 -m pytest -q -m student -o addopts=` — `248 passed, 54 deselected` (62 test áp dụng cho mỗi shape). Output: [test_results_student_matrix.txt](test_results_student_matrix.txt).
-- Checker: `py -3.12 -m lab8.check_submission` — `0 FAIL, 1 WARN`. Cảnh báo duy nhất là workspace còn thay đổi chưa commit; checker in commit nguồn `11c3698`.
+- Host suite: `py -3.12 -m pytest -q` — `55 passed, 248 deselected`, gồm regression test orchestrator mới.
+- Ma trận student: `py -3.12 -m pytest -q -m student -o addopts=` — `248 passed, 55 deselected` (62 test áp dụng cho mỗi shape). Output: [test_results_student_matrix.txt](test_results_student_matrix.txt).
+- Checker: `py -3.12 -m lab8.check_submission` — `0 FAIL, 1 WARN`. Cảnh báo duy nhất là workspace còn thay đổi chưa commit; checker in HEAD `26e4a53`.
 - Crash suite: `py -3.12 -m lab8.crash_test --count 20 --out reports/crash.json` — `20/20`.
 
 ### Benchmark public
@@ -59,7 +59,7 @@ Lệnh `py -3` ban đầu trỏ tới Python 3.11 không còn tồn tại; Pytho
 
 ## 7. Đóng góp và việc còn phải chốt
 
-Ba commit triển khai shape lần lượt là `5c4ca67` (Cường), `4458db6` (Dung) và `5bd9052` (Trường). Ma trận student chạy lại đạt `248 passed, 54 deselected`, gồm 62 ca cho mỗi shape; output được đính kèm tại [test_results_student_matrix.txt](test_results_student_matrix.txt). Các test liên quan được liệt kê trong bảng [TEAM.md](../../TEAM.md) và từng báo cáo cá nhân. Báo cáo cá nhân của Trường cũng đã cập nhật GitHub; phần khai báo công cụ AI cá nhân cần Trường xác nhận.
+Ba commit triển khai shape lần lượt là `5c4ca67` (Cường), `4458db6` (Dung) và `5bd9052` (Trường). Nhóm bổ sung `src/tests/test_orchestrator_handoff_regression.py` cho handoff của orchestrator; test này pass. Ma trận student chạy lại đạt `248 passed, 55 deselected`, gồm 62 ca cho mỗi shape; output được đính kèm tại [test_results_student_matrix.txt](test_results_student_matrix.txt). Các test liên quan được liệt kê trong bảng [TEAM.md](../../TEAM.md) và từng báo cáo cá nhân.
 
 ## 8. Hạn chế
 
