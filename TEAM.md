@@ -23,7 +23,7 @@
 
 | Người           | Vai                    | Commit    | Test đã thêm hoặc sửa                                                                                            |
 | --------------- | ---------------------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| Đào Kiên Cường  | Orchestrator + báo cáo | `5c4ca67` | `src/tests/test_orchestrator_handoff_regression.py`, `src/tests/test_public_matrix.py`; targeted test 1 passed; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
+| Đào Kiên Cường  | Orchestrator + báo cáo | `5c4ca67` (shape), `7c3bfd2` (test) | `src/tests/test_orchestrator_handoff_regression.py`, `src/tests/test_public_matrix.py`; targeted test 1 passed; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
 | Nguyễn Thị Dung | Workflow               | `4458db6` | `src/tests/test_public_matrix.py`, `test_authorization.py`, `test_order_cap_and_approval_binding.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
 | Vũ Xuân Trường  | Single agent           | `5bd9052` | `src/tests/test_public_matrix.py`, `test_refund_idempotency.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
 

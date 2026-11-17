@@ -17,6 +17,7 @@ Phụ trách shape `orchestrator`, hỗ trợ handoff/investigator và phối h�
 - Giữ `parent_secret`, raw headers và dữ liệu claim nhạy cảm ngoài handoff/trace; không cấp tool ghi cho investigator.
 - Để `durability.issue_refund` kiểm approval, trần theo đơn, idempotency và ghi ledger.
 - Commit triển khai: [`5c4ca67`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/5c4ca6726fff300abee4ac3b4f547daebd29f211).
+- Commit test orchestrator: [`7c3bfd2`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/7c3bfd24dc4550ad9f22282d0d9b348ae6af7889).
 - Phối hợp tổng hợp số liệu benchmark, crash và hidden self-check vào báo cáo nhóm.
 
 ## 4. Bằng chứng và kiểm thử

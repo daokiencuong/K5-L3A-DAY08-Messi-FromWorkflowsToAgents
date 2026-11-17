@@ -57,9 +57,9 @@ Nhóm chọn **workflow**. Trên corpus public, workflow ngang pass rate với s
 
 Lệnh `py -3` ban đầu trỏ tới Python 3.11 không còn tồn tại; Python 3.12 trong WindowsApps bị sandbox chặn. Sau khi được cấp quyền chạy Python ngoài sandbox, nhóm dùng `py -3.12` và xác nhận phiên bản `3.12.10`. Smoke, hai test suite, crash suite, benchmark, hidden self-check và checker đều chạy được.
 
-## 7. Đóng góp và việc còn phải chốt
+## 7. Đóng góp 
 
-Ba commit triển khai shape lần lượt là `5c4ca67` (Cường), `4458db6` (Dung) và `5bd9052` (Trường). Nhóm bổ sung `src/tests/test_orchestrator_handoff_regression.py` cho handoff của orchestrator; test này pass. Ma trận student chạy lại đạt `248 passed, 55 deselected`, gồm 62 ca cho mỗi shape; output được đính kèm tại [test_results_student_matrix.txt](test_results_student_matrix.txt). Các test liên quan được liệt kê trong bảng [TEAM.md](../../TEAM.md) và từng báo cáo cá nhân.
+Ba commit triển khai shape lần lượt là `5c4ca67` (Cường), `4458db6` (Dung) và `5bd9052` (Trường). Cường bổ sung test handoff orchestrator trong commit [`7c3bfd2`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/7c3bfd24dc4550ad9f22282d0d9b348ae6af7889); test này pass. Ma trận student chạy lại đạt `248 passed, 55 deselected`, gồm 62 ca cho mỗi shape; output được đính kèm tại [test_results_student_matrix.txt](test_results_student_matrix.txt). Các test liên quan được liệt kê trong bảng [TEAM.md](../../TEAM.md) và từng báo cáo cá nhân.
 
 ## 8. Hạn chế
 
