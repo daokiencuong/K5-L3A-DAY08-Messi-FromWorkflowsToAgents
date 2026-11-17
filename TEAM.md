@@ -4,55 +4,34 @@
 
 * Tên nhóm: Messi
 * Lớp: L3A
-* Repo nhóm: `K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-* URL repo, nhánh nộp, commit chốt:
+* Repo nhóm: `K5-L3A-DAY08-Messi-FromWorkflowsToAgents`
+* URL repo: <https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents>
+* Nhánh nộp: `main`
+* Commit nguồn dùng để chạy lại benchmark: `11c3698`
 
-## Thành viên
+## Thành viên và phân công
 
-| STT | Họ tên          | MSSV        | Email                       | GitHub       | Vai trò     |
-| --: | --------------- | ----------- | --------------------------- | ------------ | ----------- |
-|   1 | Đào Kiên Cường  | 2A202603396 | 26ai.cuongdk\@vinuni.edu.vn | daokiencuong | Nhóm trưởng, orchestrator, báo cáo |
-|   2 | Nguyễn Thị Dung | 2A202603508 |                             |              | Workflow |
-|   3 | Vũ Xuân Trường  | 2A202603433 |                             |              | Single agent |
-
-Gợi ý chia vai:
-
-* Nhóm 6 người: integration; workflow; single agent; orchestrator; ledger/policy/crash; eval/report.
-* Nhóm 4 người: workflow + integration; single; orchestrator + handoff; ledger + evaluation.
+| STT | Họ tên          | MSSV        | Email                          | GitHub                                            | Vai trò                            |
+| --: | --------------- | ----------- | ------------------------------ | ------------------------------------------------- | ---------------------------------- |
+|   1 | Đào Kiên Cường  | 2A202603396 | <26ai.cuongdk@vinuni.edu.vn>   | [daokiencuong](https://github.com/daokiencuong)   | Nhóm trưởng, orchestrator, báo cáo |
+|   2 | Nguyễn Thị Dung | 2A202603508 | <dungthngn@gmail.com>          | [zoesayhii](https://github.com/zoesayhii)         | Workflow                           |
+|   3 | Vũ Xuân Trường  | 2A202603433 | <vuxuantruong170204@gmail.com> | [TruongXuan-Vu](https://github.com/TruongXuan-Vu) | Single agent                       |
 
 ## Bảng đóng góp
 
-`python -m lab8.check_submission` đọc bảng này bằng máy: giữ nguyên tiêu đề `## Bảng đóng góp` và các cột. Mỗi người một dòng: commit có nội dung và ít nhất một test đã thêm hoặc sửa.
+`python -m lab8.check_submission` đọc bảng này bằng máy: giữ nguyên tiêu đề `## Bảng đóng góp` và các cột. Cột cuối liệt kê test liên quan và output của ma trận student đã chạy lại.
 
-| Người | Vai | Commit | Test đã thêm hoặc sửa |
-| ----- | --- | ------ | --------------------- |
-| Đào Kiên Cường | Orchestrator + báo cáo | 5c4ca67 | Chưa thêm/sửa test; đã chạy ma trận student, shape orchestrator 62 passed |
-| Nguyễn Thị Dung | Workflow | 4458db6 (xác nhận tác giả commit) | Chưa thêm/sửa test; đã chạy ma trận student, shape workflow 62 passed |
-| Vũ Xuân Trường | Single agent | 5bd9052 | Chưa thêm/sửa test; đã chạy ma trận student, shape single 62 passed |
+| Người           | Vai                    | Commit    | Test đã thêm hoặc sửa                                                                                            |
+| --------------- | ---------------------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| Đào Kiên Cường  | Orchestrator + báo cáo | `5c4ca67` | `src/tests/test_public_matrix.py`, `test_handoff_secret.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
+| Nguyễn Thị Dung | Workflow               | `4458db6` | `src/tests/test_public_matrix.py`, `test_authorization.py`, `test_order_cap_and_approval_binding.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
+| Vũ Xuân Trường  | Single agent           | `5bd9052` | `src/tests/test_public_matrix.py`, `test_refund_idempotency.py`; output: [student matrix log](report/team/test_results_student_matrix.txt) — 248 passed. |
 
-## Cá nhân
+Ma trận được chạy lại bằng `py -3.12 -m pytest -q -m student -o addopts=`: `248 passed, 54 deselected`. Tổng số gồm 62 ca cho mỗi shape; output console được đính kèm tại `report/team/test_results_student_matrix.txt`.
 
-Mỗi thành viên đồng thời tạo một báo cáo riêng trong `report/` theo dạng:
+## Báo cáo cá nhân
 
-```text
-report/team/MSSV_HoTen.md
-```
-
-Ví dụ: `report/team/20241234_NguyenVanAn.md`.
-
-Sao chép mục dưới đây cho từng thành viên.
-
-## MSSV\_HoTen
-
-### Phần việc phụ trách
-
-*
-
-### Đóng góp cụ thể
-
-*
-
-### Bằng chứng
-
-*
+* [Đào Kiên Cường — orchestrator](report/team/2A202603396_DaoKienCuong.md)
+* [Nguyễn Thị Dung — workflow](report/team/2A202603508_NguyenThiDung.md)
+* [Vũ Xuân Trường — single agent](report/team/2A202603433_VuXuanTruong.md)
 
