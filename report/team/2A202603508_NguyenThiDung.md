@@ -18,6 +18,7 @@ Phụ trách shape `workflow` trong `src/lab8/shapes/workflow.py`. Workflow th�
 - Truyền quote đầy đủ vào `durability.issue_refund`; để host áp dụng approval, trần theo đơn, idempotency và ghi ledger.
 - Xử lý các trạng thái `needs_info`, `escalated`, `denied`, `failed` và `resolved`, đồng thời ghi trace theo contract.
 - Commit triển khai workflow: [`4458db6`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/4458db6336ed83263649291ea277a91c532b46a6).
+- Commit thêm test: [`3f0db08`](https://github.com/daokiencuong/K5-L3A-DAY08-Messi-FromWorkflowsToAgents/commit/3f0db08f9ad1ff8b6cc0db7a95b8c3f29a00d542).
 
 ## 4. Bằng chứng và kiểm thử
 
@@ -28,7 +29,7 @@ Phụ trách shape `workflow` trong `src/lab8/shapes/workflow.py`. Workflow th�
 - Hidden self-check: 200 trial chạy hết, `0` lỗi và `0` leak suspect. Không có nhãn nên đây không phải điểm hidden.
 - Crash suite: `20/20` toàn suite.
 
-Test liên quan: `src/tests/test_public_matrix.py`, `test_crash_suite.py`, `test_authorization.py` và `test_order_cap_and_approval_binding.py`. Output ma trận student: [`test_results_student_matrix.txt`](test_results_student_matrix.txt) — `248 passed, 55 deselected` tổng thể; 62 ca áp dụng cho workflow đều pass.
+Test liên quan: `src/tests/test_workflow_member.py`, `src/tests/test_public_matrix.py`, `test_crash_suite.py`, `test_authorization.py` và `test_order_cap_and_approval_binding.py`. Output ma trận student: [`test_results_student_matrix.txt`](test_results_student_matrix.txt) — `248 passed, 55 deselected` tổng thể; 62 ca áp dụng cho workflow đều pass. Test thành viên mới kiểm tra claim thiếu `order_id` trả `needs_info` và không ghi ledger.
 
 ## 5. Công cụ AI đã dùng
 
