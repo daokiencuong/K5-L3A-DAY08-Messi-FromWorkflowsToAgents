@@ -15,13 +15,16 @@ Phụ trách shape single agent (shape B): một ReAct agent dùng `lab8.runtime
 
 - Triển khai `run_claim` cho shape single: đọc claim qua `get_claim_view`, `lookup_order`, `lookup_refund_history`, `compute_compensation` trong vòng ReAct; quote lấy từ order row, không tin số ngày trong ticket; truyền full quote vào `durability.issue_refund`; forward `crash_at` và không bắt `InjectedCrash`.
 - Commit triển khai shape: `5bd9052`.
-- Test liên quan: `src/tests/test_public_matrix.py`, `test_authorization.py`, `test_refund_idempotency.py` và `test_crash_suite.py`; 62 test áp dụng cho single đều pass.
+- Commit thêm test regression: `bf14df4`.
+- Test liên quan: `src/tests/test_public_matrix.py`, `test_authorization.py`, `test_refund_idempotency.py`, `test_crash_suite.py` và `test_single_react_regression.py` (3 test); 62 test áp dụng cho single đều pass.
 - Cùng nhóm tổng hợp benchmark public, crash safety và nghiên cứu architecture choices vào các báo cáo nhóm.
 
 ## 4. Bằng chứng
 
-- Commit: `5bd9052`.
-- Test đã chạy: `py -3.12 -m pytest -q -m student -o addopts=` — `248 passed, 55 deselected` tổng thể. Output: [`test_results_student_matrix.txt`](test_results_student_matrix.txt).
+- Commit triển khai shape: `5bd9052`.
+- Commit thêm test regression: `bf14df4`.
+
+- Test đã chạy: `py -3.12 -m pytest -q -m student -o addopts=` — `248 passed, 55 deselected` tổng thể (sau khi thêm test regression: host `57 passed`). Output: [`test_results_student_matrix.txt`](test_results_student_matrix.txt).
 - Benchmark: `src/reports/benchmark.json`; run id ví dụ `R-single-C-001-s11`.
 - Crash suite: `src/reports/crash.json`, `20/20`.
 
